@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Overvind din frygt, en obstacle ad gangen! Følg Tobias Christiansen, en passioneret OCR-løber.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- giver the browser instructions on how to control the page dimensions and scaling  -->
+  <meta name="keywords" content="OCR, obstacle course racing, løb, Tobias Christiansen, træning">
+  <meta name="author" content="Tobias Christiansen">
+  <title>Overvind din frygt, en obstacle ad gangen!</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Overvind din frygt, en obstacle ad gangen!</h1>
+    <h2>Tobias Christiansen - OCR-løber</h2>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li> <!-- Link til startside -->
+      <li><a href="om-mig.html">Om mig</a></li> <!-- Link til en anden HTML-fil -->
+      <li><a href="mine-lob.html">Mine løb</a></li> <!-- Link til en anden HTML-fil -->
+      <li><a href="blog.html">Blog</a></li> <!-- Link til en anden HTML-fil -->
+      <li><a href="links.html">Links</a></li> <!-- Link til en anden HTML-fil -->
+    </ul>
+  </nav>
+  
+
+  <main>
+    <section id="om-mig">
+      <p>Jeg hedder Tobias Christiansen, og jeg er en passioneret OCR-løber på hobby niveau. </p>
+      <img src="../data/MeHanging.JPG" alt="Tobias Christiansen hængende i en obstacle">
+    </section>
+
+    <section id="mine-lob">
+      <h2>Mine Løb</h2>
+          
+      <ul>
+        <li>
+          <h3>Nordic Race Beach 2023</h3>
+          <p>Dato: 6. maj 2023</p>
+          </li>
+        <li>
+          <h3>Nordic Race Beach 2024</h3>
+          <p>Dato: 5. maj 2024</p>
+          </li>
+        <li>
+          <h3>Reborn Family Run</h3>
+          <p>Dato: 25. maj 2024</p>
+          <p>Medvirkende: Min datter på 10 år</p>
+        </li>
+        <li>
+          <h3>Nordic Race Urban</h3>
+          <p>Dato: 7. Sep 2024</p>
+          </li>
+      </ul>
+      <p>
+        <p>Næste løb er <strong id="next-race-name">Reborn Classic - Family Run</strong> og starter om:</p> 
+        <p id="countdown"></p> <!-- Countdown -->
+          <a href="https://www.reborn.dk/events/the-classic-family/" target="_blank">Klik her for at læse mere om næste løb</a>
+        </p>
+          <h3>Her er lidt billeder fra mit sidste Reborn løb</h3>
+        </p>
+        <div class="slider">
+          <img class="slides" src="../data/reborn 2024/IMG_5867.JPEG" alt="ReBorn 1">
+          <img class="slides" src="../data/reborn 2024/IMG_5870.JPEG" alt="ReBorn 2">
+          <img class="slides" src="../data/reborn 2024/IMG_5874.JPEG" alt="ReBorn 3">
+          <img class="slides" src="../data/reborn 2024/IMG_5877.JPEG" alt="ReBorn 4">
+          <img class="slides" src="../data/reborn 2024/IMG_8514.JPEG" alt="ReBorn 5">
+        </div>
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <article>
+        <h3>Mit seneste løb: Urban 2024</h3>
+        <p>Jeg gennemførte lige Nordic Race Urban på Reffen, og det var en fantastisk oplevelse!</p>
+        <a href="blog-post-1.html">Læs mere...</a>
+        <h3>Hjernerystelse: Et gok i nøden</h3>
+        <p>Jeg lå og slappede af i min hængekøje da jeg lige pludselig fik den ene stolpe lige i hovedet.... av av av</p>
+        <img src="../data/stolpe.JPEG"
+
+      </article>
+    </section>
+
+    
+    <section id="Links">
+      <h2>Vejret i dit område</h2>
+      <p id="weather-info">Henter vejrdata...</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Tobias Christiansen - 2024</p>
+  </footer>
+
+   <!-- Link til separate JS-filer -->
+  <script src="../js/countdown.js"></script>
+  <script src="../js/weather.js"></script>
+  <script src="../js/script-slider.js"></script>
+
+
+</body>
+</html>
