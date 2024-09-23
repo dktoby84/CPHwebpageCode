@@ -116,6 +116,12 @@ img {
 img:hover {
   transform: scale(1.05);
 }
+video {
+  width: 100%;
+  max-height: 80vh; /* Sætter en maksimal højde på 80% af viewport-højden */
+  object-fit: cover;
+}
+
 
 /* Layout til mine-lob.html */
 body.mine-lob {
