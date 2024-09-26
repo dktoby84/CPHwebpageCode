@@ -108,6 +108,7 @@ h2 {
 img {
   width: auto ;  /* Billeder forbliver 30% af containerens bredde */
   height: auto;
+  max-width: 500px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -243,10 +244,11 @@ footer a:hover {
 
 /* Responsivt design */
 @media (max-width: 768px) {
-  nav ul {
-    padding: 10px;
-    display: block;
+  img {
+    width: 80%;      /* Adjust for mobile */
+    max-width: 300px; /* Ensure the image doesn't get too big on small screens */
   }
+}
 
   nav li {
     display: block;
