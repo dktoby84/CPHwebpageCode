@@ -106,13 +106,14 @@ h2 {
 
 /* Billeder */
 img {
-  width: auto ;  /* Billeder forbliver 30% af containerens bredde */
+  width: 100%;
+  max-width: 100%; /* Ensures images don't stretch beyond their container */
   height: auto;
-  max-width: 500px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
+
 
 img:hover {
   transform: scale(1.05);
@@ -167,10 +168,13 @@ body.mine-lob {
 
 /* Responsivt layout */
 @media (max-width: 768px) {
-  .lob-container {
-    grid-template-columns: 1fr; /* En enkelt kolonne på små skærme */
+  img {
+    width: 80%;  /* Takes 80% of the container width */
+    max-width: 100%; /* Prevents it from stretching too much */
+    height: auto;
   }
 }
+
 
 
 /* Blog Artikel */
