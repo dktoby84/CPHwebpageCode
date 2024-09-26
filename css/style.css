@@ -117,7 +117,7 @@ section:nth-child(3) {
 /* Billeder */
 img {
   width: 100%; /* Allows the image to fill its container */
-  max-width: 400px; /* Sets a maximum width for large screens */
+  max-width: 100px; /* Sets a maximum width for large screens */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
