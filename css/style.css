@@ -106,13 +106,14 @@ h2 {
 
 /* Billeder */
 img {
-  width: 100%;
-  max-width: 100%; /* Ensures images don't stretch beyond their container */
+  width: 100%; /* Allows the image to fill its container */
+  max-width: 500px; /* Sets a maximum width for large screens */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
+
 
 
 img:hover {
@@ -169,11 +170,12 @@ body.mine-lob {
 /* Responsivt layout */
 @media (max-width: 768px) {
   img {
-    width: 80%;  /* Takes 80% of the container width */
-    max-width: 100%; /* Prevents it from stretching too much */
+    width: 90%;  /* Slightly smaller than full width on mobile */
+    max-width: 100%;
     height: auto;
   }
 }
+
 
 
 
