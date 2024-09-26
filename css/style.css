@@ -59,31 +59,30 @@ nav a:hover {
   color: #f0a500;
 }
 
-/* Main layout */
+/* Main layout for larger screens */
 main {
   display: grid;
-  grid-template-columns: 2fr 1fr;  /* Forskellige kolonnebredder */
-  grid-template-rows: auto auto;   /* Automatisk højde */
+  grid-template-columns: 2fr 1fr;  /* Two columns for larger screens */
+  grid-template-rows: auto auto;
   grid-gap: 20px;
   padding: 20px;
 }
 
 section:nth-child(1) {
-  grid-column: span 2;  /* Strækker sig over begge kolonner */
+  grid-column: span 2;  /* Span across both columns */
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* Flexbox for centrering af indhold */
   display: flex;
-  flex-direction: column;  /* Sørger for at tekst og billede stables lodret */
-  justify-content: center; /* Centrerer indholdet lodret */
-  align-items: center;     /* Centrerer indholdet horisontalt */
-  text-align: right;      /* Centrerer teksten */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
 }
 
 section:nth-child(2) {
-  grid-column: 1 / 2;  /* Optager første kolonne */
+  grid-column: 1 / 2;  /* Occupies first column */
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
@@ -91,18 +90,32 @@ section:nth-child(2) {
 }
 
 section:nth-child(3) {
-  grid-column: 2 / 3;  /* Optager anden kolonne */
+  grid-column: 2 / 3;  /* Occupies second column */
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-  font-size: 2rem;
-  border-bottom: 3px solid #103a03;
-  margin-bottom: 20px;
+/* Stacking sections on mobile */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;  /* Single column layout on small screens */
+    grid-gap: 20px;
+    padding: 10px;  /* Less padding on mobile */
+  }
+
+  section:nth-child(1),
+  section:nth-child(2),
+  section:nth-child(3) {
+    grid-column: span 1;  /* Each section takes up the full width in a single column */
+  }
+
+  section:nth-child(1) {
+    text-align: center;  /* Center text for mobile */
+  }
 }
+
 
 /* Billeder */
 img {
