@@ -106,7 +106,7 @@ h2 {
 
 /* Billeder */
 img {
-  width: 30%;  /* Billeder forbliver 30% af containerens bredde */
+  width: auto ;  /* Billeder forbliver 30% af containerens bredde */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -262,7 +262,10 @@ footer a:hover {
   }
 
   img {
-    width: 40%;  /* Billeder fylder 40% af containerens bredde på små skærme */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   main {
