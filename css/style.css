@@ -145,10 +145,12 @@ body.mine-lob {
 }
 
 .lob-container img {
-  width: auto;
-  height: auto;
-  border-radius: 8px;
+  width: 100%; /* Ensures the image takes up the full width of its container */
+  max-width: 500px; /* Sets a reasonable maximum width */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Keeps the rounded corners */
 }
+
 
 .lob-container div {
   display: flex;
@@ -175,6 +177,15 @@ body.mine-lob {
     height: auto;
   }
 }
+
+@media (max-width: 768px) {
+  .lob-container img {
+    width: 90%; /* Slightly smaller than full width on mobile */
+    max-width: 100%; /* Ensures it doesn't exceed container size */
+    height: auto; /* Keep aspect ratio */
+  }
+}
+
 
 
 
