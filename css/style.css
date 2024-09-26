@@ -63,13 +63,12 @@ nav a:hover {
 main {
   display: grid;
   grid-template-columns: 2fr 1fr;  /* Two columns for larger screens */
-  grid-template-rows: auto auto;
   grid-gap: 20px;
   padding: 20px;
 }
 
 section:nth-child(1) {
-  grid-column: span 2;  /* Span across both columns */
+  grid-column: span 2;  /* Span across both columns on large screens */
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
@@ -78,11 +77,11 @@ section:nth-child(1) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: right;
+  text-align: center;
 }
 
 section:nth-child(2) {
-  grid-column: 1 / 2;  /* Occupies first column */
+  grid-column: 1 / 2;  /* First section in the left column */
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
@@ -90,29 +89,27 @@ section:nth-child(2) {
 }
 
 section:nth-child(3) {
-  grid-column: 2 / 3;  /* Occupies second column */
+  grid-column: 2 / 3;  /* Second section in the right column */
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Stacking sections on mobile */
+/* Mobile layout: stacking sections vertically */
 @media (max-width: 768px) {
   main {
     grid-template-columns: 1fr;  /* Single column layout on small screens */
     grid-gap: 20px;
-    padding: 10px;  /* Less padding on mobile */
+    padding: 10px;
   }
 
-  section:nth-child(1),
-  section:nth-child(2),
-  section:nth-child(3) {
-    grid-column: span 1;  /* Each section takes up the full width in a single column */
+  section {
+    grid-column: span 1;  /* All sections take full width on small screens */
   }
 
   section:nth-child(1) {
-    text-align: center;  /* Center text for mobile */
+    text-align: center;  /* Center text on mobile */
   }
 }
 
