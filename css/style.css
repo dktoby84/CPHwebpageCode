@@ -279,34 +279,4 @@ footer a:hover {
   display: block;
 }
 
-/* Responsivt design */
-@media (max-width: 768px) {
-  img {
-    width: 80%;      /* Adjust for mobile */
-    max-width: 300px; /* Ensure the image doesn't get too big on small screens */
-  }
-}
 
-  nav li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header h2 {
-    font-size: 1.2rem;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    }
-
-
-  main {
-    grid-template-columns: 1fr;
-  }
-}
