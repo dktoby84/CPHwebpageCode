@@ -223,9 +223,11 @@ footer a:hover {
   max-height: 100%;
 }
 .om-mig-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 
-  }
+  display: flex; /* Aktivér Flexbox */
+  flex-direction: row; /* Retningen af elementerne (kan være 'column' for lodret) */
+  justify-content: space-between; /* Justering af elementerne langs hovedaksen */
+  align-items: center; /* Justering af elementerne langs tværaksen */
+}
 
 .lob-grid {
   display: grid;
