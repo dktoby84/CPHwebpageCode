@@ -248,6 +248,21 @@ footer a:hover {
     font-size: 16px; /* Tilpas skriftstørrelsen, hvis nødvendigt */
   }
 
+  .om-mig-grid {
+    display: block; /* Ændre til block for at få indholdet til at stable sig i én kolonne */
+    text-align: center; /* Center teksten */
+  }
+
+  .video-container {
+    margin: 0 auto 20px; /* Centrering og afstand under videoen */
+  }
+
+  p {
+    margin: 0; /* Fjerne margin for at gøre teksten mere kompakt */
+  }
+
+
+
   .slider {
     flex-direction: column; /* Skifter til kolonne-layout */
     align-items: center; /* Centrerer indholdet */
@@ -264,4 +279,5 @@ footer a:hover {
   .lob-grid {
     grid-template-columns: 1fr; /* Enkelt kolonne-layout */
   }
+
 }
