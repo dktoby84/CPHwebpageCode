@@ -63,7 +63,7 @@ nav a:hover {
 /* Main layout: 3 lige store sektioner */
 main {
   display: flex;
-  grid-template-columns: 1fr, 1fr, 1fr);
+  grid-template-columns: 1fr, 1fr, 1fr;
   grid-gap: 20px;
   padding: 20px;
 }
