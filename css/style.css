@@ -62,8 +62,8 @@ nav a:hover {
 
 /* Main layout: 3 lige store sektioner */
 main {
-  display: flex;
-  grid-template-columns: 1fr, 1fr, 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 lige store kolonner */
   grid-gap: 20px;
   padding: 20px;
 }
@@ -76,9 +76,10 @@ section {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: right;
-  align-items: right;
+  justify-content: flex; /* Justering af indhold */
+  align-items: flex; /* Justering af indhold */
 }
+
 
 /* Billeder fylder 100% af containeren */
 section img {
@@ -226,6 +227,7 @@ footer a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 lige store kolonner */
   gap: 20px; /* Plads mellem kolonnerne */
+  width: 100%; /* Grid fylder hele containerens bredde */
 }
 
 .lob-container {
@@ -234,6 +236,13 @@ footer a:hover {
   border-radius: 8px; /* Runde hjørner */
   overflow: hidden; /* Skjuler indhold der går ud over containerens grænser */
   padding: 10px; /* Indvendig plads */
+  width: 100%; /* Fyld hele skærmbredden */
+  box-sizing: border-box; /* Inkluder padding og border i bredden */
+}
+
+.img-container {
+  width: auto; /* Gør billedcontaineren responsiv */
+  height: auto;
 }
 
 /* Mobil-styling */
@@ -248,10 +257,7 @@ footer a:hover {
     overflow: hidden; /* Sørger for, at ingen billeder ryger ud af slideren */
   }
 
-  .img-container {
-    width: 100%; /* Gør billedcontaineren responsiv */
-  }
-
+ 
   .slides {
     width: 100%; /* Gør billederne responsive */
     height: auto; /* Bevarer billedforholdet */
