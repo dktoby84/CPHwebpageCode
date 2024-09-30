@@ -166,7 +166,7 @@ footer a:hover {
 
 .slides {
   display: none;
-  width: 20%;
+  width: auto;
   height: auto;
 }
 
