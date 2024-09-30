@@ -93,6 +93,7 @@ img:hover {
   transform: scale(1.05);
 }
 
+<<<<<<< HEAD
 video {
   width: 100%;
   max-height: 80vh; /* Sætter en maksimal højde på 80% af viewport-højden */
@@ -100,6 +101,50 @@ video {
 }
 
 /* Responsivt layout for mindre skærme */
+=======
+/* Layout til mine-lob.html */
+body.mine-lob {
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.lob-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* To kolonner */
+  grid-gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.lob-container img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.lob-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lob-container h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.lob-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Responsivt layout */
+>>>>>>> parent of b1ca394 (display video)
 @media (max-width: 768px) {
   main {
     grid-template-columns: 1fr; /* Enkelt kolonne layout på små skærme */
