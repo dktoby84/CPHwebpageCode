@@ -181,6 +181,27 @@ footer a:hover {
   display: block;
 }
 
+.lob-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolonner af lige størrelse */
+  gap: 20px; /* Plads mellem kolonnerne */
+}
+
+.lob-container {
+  background-color: #f9f9f9; /* Baggrundsfarve til containeren */
+  border: 1px solid #ddd; /* Kant omkring containeren */
+  border-radius: 8px; /* Runde hjørner */
+  overflow: hidden; /* Skjuler indhold der går ud over containerens grænser */
+  padding: 10px; /* Indvendig plads */
+}
+
+@media (max-width: 768px) {
+  .lob-grid {
+      grid-template-columns: 1fr; /* Skifter til en enkelt kolonne */
+  }
+}
+
+
 
 
 
