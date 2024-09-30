@@ -99,10 +99,9 @@ video {
   object-fit: cover;
 }
 
-/* Responsivt layout for mindre skærme */
 @media (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr; /* Enkelt kolonne layout på små skærme */
+  .slider {
+    flex-direction: column; /* Skifter til en kolonne-layout på mindre skærme */
   }
 }
 
@@ -163,15 +162,17 @@ footer a:hover {
   position: relative; /* For at placere billederne korrekt */
 }
 
-.slides {
-  flex: 1; /* Giver hvert billede samme vægt og størrelse */
-  height: auto; /* Beholder billedets højde i forhold til bredden */
+.img-container {
+  flex: 1; /* Giver hver img-container samme størrelse */
+  padding: 5px; /* Tilføjer lidt plads omkring billederne */
 }
 
-.slides img {
+.slides {
   width: 100%; /* Billeder fylder 100% af containeren */
   height: auto; /* Beholder proportionerne */
   object-fit: cover; /* Sikrer at billedet dækker området uden at ændre formatet */
+  border-radius: 8px; /* Runde hjørner */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skygge */
 }
 
 
@@ -180,38 +181,6 @@ footer a:hover {
   display: block;
 }
 
-.fullscreen-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Sikrer at det vises over alt andet */
-}
 
-.fullscreen-image img {
-  max-width: 90%; /* Billedet tilpasser sig skærmen */
-  max-height: 90%;
-}
 
-#watermark {
-  position: fixed; /* Gør billedet fast i forhold til vinduet */
-  top: 0;
-  left: 0;
-  width: 100%; /* Dækker hele bredden */
-  height: 100%; /* Dækker hele højden */
-  object-fit: cover; /* Bevarer billedets proportioner */
-  opacity: 0.1; /* Gør billedet gennemsigtigt */
-  pointer-events: none; /* Gør det muligt at klikke igennem billedet */
-  z-index: -1; /* Placerer billedet bag indholdet */
-}
 
-#om-mig {
-  position: relative; /* Sørger for at teksten vises ovenpå vandmærket */
-  z-index: 1; /* Gør teksten synlig over vandmærket */
-  margin: 20px; /* Tilføj margin hvis nødvendigt */
-}
