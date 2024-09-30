@@ -156,34 +156,83 @@ footer a:hover {
 }
 
 .slider {
-  display: flex; /* Gør det til en flex-container */
-  overflow: hidden; /* Skjuler billeder udenfor slideren */
-  width: 100%; /* Slideren fylder hele bredden */
-  position: relative; /* For at placere billederne korrekt */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  max-width: 1200px; /* Slider fylder hele bredden */
+  margin: 0 auto;
+  overflow: hidden; /* Sikrer at billeder ikke rykker ud af slideren */
 }
 
 .img-container {
-  flex: 1; /* Giver hver img-container samme størrelse */
-  padding: 5px; /* Tilføjer lidt plads omkring billederne */
+  width: 100%;
+  max-width: 100%; /* Sikrer at billeder fylder hele bredden */
+  height: auto;
+  display: flex;
+  justify-content: center; /* Centrerer billedet */
+  align-items: center; /* Juster lodret hvis nødvendigt */
 }
 
 .slides {
-  width: 100%; /* Billeder fylder 100% af containeren */
-  height: auto; /* Beholder proportionerne */
-  object-fit: cover; /* Sikrer at billedet dækker området uden at ændre formatet */
-  border-radius: 8px; /* Runde hjørner */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skygge */
+  display: none; /* Skjul alle billeder som udgangspunkt */
+  width: 100%; /* Fylder hele bredden af containeren */
+  height: auto; /* Automatisk højde */
+  object-fit: contain; /* Sørger for at billederne ikke bliver strukket */
 }
 
-
-/* Vis kun det aktive billede */
-.active {
-  display: block;
+.slides:first-child {
+  display: block; /* Vis det første billede som standard */
 }
+
+/* Knapper */
+.prevButton, .nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prevButton {
+  left: 10px; /* Flyt knappen lidt ind fra venstre */
+}
+
+.nextButton {
+  right: 10px; /* Flyt knappen lidt ind fra højre */
+}
+
+.prevButton:hover, .nextButton:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Gør baggrunden mørkere ved hover */
+}
+
+.fullscreen-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.fullscreen-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 
 .lob-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 kolonner af lige størrelse */
+  grid-template-columns: repeat(2, 1fr); /* 2 lige store kolonner */
   gap: 20px; /* Plads mellem kolonnerne */
 }
 
@@ -197,9 +246,10 @@ footer a:hover {
 
 @media (max-width: 768px) {
   .lob-grid {
-      grid-template-columns: 1fr; /* Skifter til en enkelt kolonne */
+    grid-template-columns: 1fr; /* Skifter til en enkelt kolonne på mindre skærme */
   }
 }
+
 
 
 
