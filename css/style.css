@@ -95,15 +95,17 @@ main {
   padding: 20px;
 }
 
+
+/* Main layout: 3 lige store sektioner */
 main {
   display: grid;
-  grid-template-columns: 2fr 1fr;  /* Two columns for larger screens */
+  grid-template-columns: repeat(3, 1fr); /* 3 lige store kolonner */
   grid-gap: 20px;
   padding: 20px;
 }
 
-section:nth-child(1) {
-  grid-column: span 2;  /* Span across both columns on large screens */
+/* Styling af sektioner */
+section {
   background-color: #fff;
   border-radius: 8px;
   padding: 20px;
@@ -112,40 +114,14 @@ section:nth-child(1) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
-section:nth-child(2) {
-  grid-column: 1 / 2;  /* First section in the left column */
-  background-color: #fff;
+/* Billeder fylder 100% af containeren */
+section img {
+  width: 100%; /* Fylder 100% af sektionens bredde */
+  height: auto;
   border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-section:nth-child(3) {
-  grid-column: 2 / 3;  /* Second section in the right column */
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Mobile layout: stacking sections vertically */
-@media (max-width: 768px) {
-  main {
-    grid-template-columns: 1fr;  /* Single column layout on small screens */
-    grid-gap: 20px;
-    padding: 10px;
-  }
-
-  section {
-    grid-column: span 1;  /* All sections take full width on small screens */
-  }
-
-  section:nth-child(1) {
-    text-align: center;  /* Center text on mobile */
-  }
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -214,13 +190,12 @@ body.mine-lob {
   color: #555;
 }
 
-/* Responsivt layout */
+/* Responsivt layout for mindre skærme */
 @media (max-width: 768px) {
-  img {
-    width: 90%;  /* Slightly smaller than full width on mobile */
-    max-width: 100%;
-    height: auto;
+  main {
+    grid-template-columns: 1fr; /* Enkelt kolonne layout på små skærme */
   }
+}
 }
 
 @media (max-width: 768px) {
