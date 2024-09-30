@@ -33,7 +33,6 @@ header h2 {
   color: #eeeeee;
 }
 
-
 /* Navigation */
 nav ul {
   list-style: none;
@@ -41,7 +40,7 @@ nav ul {
   margin: 0;
   background-color: #103a03;
   display: flex;
-  justify-content: center; /* Centerer navigationen */
+  justify-content: center;
 }
 
 nav li {
@@ -60,41 +59,6 @@ nav a {
 nav a:hover {
   color: #f0a500;
 }
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  background-color: #103a03;
-}
-
-nav li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #f0a500;
-}
-
-
-/* Main layout for larger screens */
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;  /* Lige store kolonner */
-  grid-gap: 20px;
-  padding: 20px;
-}
-
 
 /* Main layout: 3 lige store sektioner */
 main {
@@ -125,10 +89,10 @@ section img {
   transition: transform 0.3s ease;
 }
 
-
 img:hover {
   transform: scale(1.05);
 }
+
 video {
   width: 100%;
   max-height: 80vh; /* Sætter en maksimal højde på 80% af viewport-højden */
@@ -141,7 +105,6 @@ video {
     grid-template-columns: 1fr; /* Enkelt kolonne layout på små skærme */
   }
 }
-
 
 /* Blog Artikel */
 article {
@@ -211,5 +174,3 @@ footer a:hover {
 .active {
   display: block;
 }
-
-
