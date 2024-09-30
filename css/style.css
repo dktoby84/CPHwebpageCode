@@ -240,10 +240,11 @@ footer a:hover {
   box-sizing: border-box; /* Inkluder padding og border i bredden */
 }
 
-.img-container {
+/* Specifikke regler for billeder inde i .lob-container */
+.lob-container .img-container {
   width: auto; /* Gør billedcontaineren responsiv */
   height: auto;
-  grid-column: span 2;
+  grid-column: span 2; /* Fyld begge kolonner, hvis du vil */
 }
 
 /* Mobil-styling */
