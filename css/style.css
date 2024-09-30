@@ -197,3 +197,21 @@ footer a:hover {
   max-width: 90%; /* Billedet tilpasser sig skærmen */
   max-height: 90%;
 }
+
+#watermark {
+  position: fixed; /* Gør billedet fast i forhold til vinduet */
+  top: 0;
+  left: 0;
+  width: 100%; /* Dækker hele bredden */
+  height: 100%; /* Dækker hele højden */
+  object-fit: cover; /* Bevarer billedets proportioner */
+  opacity: 0.1; /* Gør billedet gennemsigtigt */
+  pointer-events: none; /* Gør det muligt at klikke igennem billedet */
+  z-index: -1; /* Placerer billedet bag indholdet */
+}
+
+#om-mig {
+  position: relative; /* Sørger for at teksten vises ovenpå vandmærket */
+  z-index: 1; /* Gør teksten synlig over vandmærket */
+  margin: 20px; /* Tilføj margin hvis nødvendigt */
+}
