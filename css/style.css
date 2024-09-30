@@ -99,11 +99,6 @@ video {
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
-  .slider {
-    flex-direction: column; /* Skifter til en kolonne-layout på mindre skærme */
-  }
-}
 
 /* Blog Artikel */
 article {
@@ -243,10 +238,27 @@ footer a:hover {
   overflow: hidden; /* Skjuler indhold der går ud over containerens grænser */
   padding: 10px; /* Indvendig plads */
 }
-
 @media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Tilpas skriftstørrelsen, hvis nødvendigt */
+  }
+
+  .slider {
+    flex-direction: column; /* Skifter til kolonne-layout */
+    align-items: center; /* Centrerer indholdet */
+  }
+
+  .img-container {
+    width: 100%; /* Gør billedcontaineren responsiv */
+  }
+
+  .slides {
+    width: 100%; /* Gør billederne responsive */
+    height: auto; /* Bevarer billedforholdet */
+  }
+
   .lob-grid {
-    grid-template-columns: 1fr; /* Skifter til en enkelt kolonne på mindre skærme */
+    grid-template-columns: 1fr; /* Enkelt kolonne-layout */
   }
 }
 
