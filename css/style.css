@@ -243,6 +243,7 @@ footer a:hover {
 .img-container {
   width: auto; /* Gør billedcontaineren responsiv */
   height: auto;
+  grid-column: span 2;
 }
 
 /* Mobil-styling */
