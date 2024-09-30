@@ -156,19 +156,24 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Slider styling */
 .slider {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  overflow: hidden;
+  display: flex; /* Gør det til en flex-container */
+  overflow: hidden; /* Skjuler billeder udenfor slideren */
+  width: 100%; /* Slideren fylder hele bredden */
+  position: relative; /* For at placere billederne korrekt */
 }
 
 .slides {
-  display: none;
-  width: 100%;
-  height: auto;
+  flex: 1; /* Giver hvert billede samme vægt og størrelse */
+  height: auto; /* Beholder billedets højde i forhold til bredden */
 }
+
+.slides img {
+  width: 100%; /* Billeder fylder 100% af containeren */
+  height: auto; /* Beholder proportionerne */
+  object-fit: cover; /* Sikrer at billedet dækker området uden at ændre formatet */
+}
+
 
 /* Vis kun det aktive billede */
 .active {
