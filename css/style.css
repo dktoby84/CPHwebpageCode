@@ -96,9 +96,7 @@ img:hover {
 video {
   width: 100%;
   max-height: 80vh; /* Sætter en maksimal højde på 80% af viewport-højden */
-  object-fit: cover;
 }
-
 
 /* Blog Artikel */
 article {
@@ -224,7 +222,6 @@ footer a:hover {
   max-height: 100%;
 }
 
-
 .lob-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 lige store kolonner */
@@ -238,6 +235,8 @@ footer a:hover {
   overflow: hidden; /* Skjuler indhold der går ud over containerens grænser */
   padding: 10px; /* Indvendig plads */
 }
+
+/* Mobil-styling */
 @media (max-width: 768px) {
   body {
     font-size: 16px; /* Tilpas skriftstørrelsen, hvis nødvendigt */
@@ -246,6 +245,7 @@ footer a:hover {
   .slider {
     flex-direction: column; /* Skifter til kolonne-layout */
     align-items: center; /* Centrerer indholdet */
+    overflow: hidden; /* Sørger for, at ingen billeder ryger ud af slideren */
   }
 
   .img-container {
@@ -255,15 +255,10 @@ footer a:hover {
   .slides {
     width: 100%; /* Gør billederne responsive */
     height: auto; /* Bevarer billedforholdet */
+    display: block; /* Sørg for, at billederne vises som blok-elementer */
   }
 
   .lob-grid {
     grid-template-columns: 1fr; /* Enkelt kolonne-layout */
   }
 }
-
-
-
-
-
-
