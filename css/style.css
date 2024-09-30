@@ -33,7 +33,33 @@ header h2 {
   color: #eeeeee;
 }
 
+
 /* Navigation */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #103a03;
+  display: flex;
+  justify-content: center; /* Centerer navigationen */
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f0a500;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -59,7 +85,15 @@ nav a:hover {
   color: #f0a500;
 }
 
+
 /* Main layout for larger screens */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Lige store kolonner */
+  grid-gap: 20px;
+  padding: 20px;
+}
+
 main {
   display: grid;
   grid-template-columns: 2fr 1fr;  /* Two columns for larger screens */
@@ -96,7 +130,7 @@ section:nth-child(3) {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-
+/* Mobile layout: stacking sections vertically */
 @media (max-width: 768px) {
   main {
     grid-template-columns: 1fr;  /* Single column layout on small screens */
