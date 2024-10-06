@@ -1,283 +1,345 @@
-/* Generelle styles */
 body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
 }
 
-/* Header */
-header {
-  background: linear-gradient(90deg, #55a96e, #103a03);
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+#landing {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+    /* Ensures that the video won't overflow the section */
+
 }
 
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+.landing-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
 }
 
-header h2 {
-  font-size: 1.5rem;
-  margin-top: 0;
-  color: #eeeeee;
+#bgVideo {
+    position: fixed;
+    /* Fixes the video in place */
+    z-index: -1;
+    /* Keeps the video behind the content */
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
 }
 
-/* Navigation */
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #103a03;
-  display: flex;
-  justify-content: center;
+#company-logo {
+    width: 250px;
+    height: 250px;
 }
 
-nav li {
-  display: inline-block;
-  margin: 0 15px;
+#about {
+    padding: 40px;
+    text-align: center;
+    background-color: #eee;
 }
 
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 10px;
-  transition: color 0.3s ease;
+#lob {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+#beach23 {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex;
+    background-color: #fff;
 }
 
-nav a:hover {
-  color: #f0a500;
+.lob-card {
+    width: 150px;
+    height: 220px;
+    background-color: transparent;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease;
 }
 
-/* Main layout: 3 lige store sektioner */
-
-
-
-/* Billeder fylder 100% af containeren */
-section img {
-  width: 100%; /* Fylder 100% af sektionens bredde */
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+.lob-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
 }
 
-img:hover {
-  transform: scale(1.05);
+.lob-card:active,
+.lob-card:focus {
+    background-color: transparent;
 }
 
-video {
-  width: 100%;
-  max-height: 80vh; /* Sætter en maksimal højde på 80% af viewport-højden */
+.lob-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
-/* Blog Artikel */
-article {
-  margin-bottom: 40px;
+.lob-card p {
+    margin-top: 10px;
+    font-weight: 500;
 }
 
-article h3 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+.lobs-grid {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 600px;
 }
 
-article p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #555;
+.mine-lob-grid {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 600px;
+}
+.mine-lob-card p {
+    margin-top: 10px;
+    font-weight: 500;
+}
+.mine-lob-card {
+    width: 50%;
+    height: auto;
+    background-color: transparent;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease;
+}
+.mine-lob-card img {
+    width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    object-fit: cover;
+    border-radius: 5px;
 }
 
-article a {
-  text-decoration: none;
-  color: #103a03;
-  font-weight: bold;
-  transition: color 0.3s ease;
+/* Updated button styling */
+button {
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
 }
 
-article a:hover {
-  color: #f0a500;
+button:hover {
+    background-color: #ff6347;
+    cursor: pointer;
 }
 
-/* Footer */
+#my-section {
+    color: white;
+    text-align: center;
+    font-size: large; 
+  }
+  
+  #my-section .bold {
+    font-weight: bold; 
+  }
+  
+  #my-section .italic {
+    font-style: italic; 
+  }
+  
+  #my-section .underline {
+    text-decoration: underline; 
+  }
+  
+  #my-section .highlight {
+    color: #ff4500; 
+  }
+  
+
 footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer a {
-  color: #f0a500;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.slider {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  max-width: 1200px; /* Slider fylder hele bredden */
-  margin: 0 auto;
-  overflow: hidden; /* Sikrer at billeder ikke rykker ud af slideren */
-}
-
-.img-container {
-  width: 100%;
-  max-width: 100%; /* Sikrer at billeder fylder hele bredden */
-  height: auto;
-  display: flex;
-  justify-content: center; /* Centrerer billedet */
-  align-items: center; /* Juster lodret hvis nødvendigt */
-}
-
-.slides {
-  display: none; /* Skjul alle billeder som udgangspunkt */
-  width: 100%; /* Fylder hele bredden af containeren */
-  height: auto; /* Automatisk højde */
-  object-fit: contain; /* Sørger for at billederne ikke bliver strukket */
-}
-
-.slides:first-child {
-  display: block; /* Vis det første billede som standard */
-}
-
-/* Knapper */
-.prevButton, .nextButton {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.prevButton {
-  left: 10px; /* Flyt knappen lidt ind fra venstre */
-}
-
-.nextButton {
-  right: 10px; /* Flyt knappen lidt ind fra højre */
-}
-
-.prevButton:hover, .nextButton:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Gør baggrunden mørkere ved hover */
-}
-
-.fullscreen-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.fullscreen-image img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.om-mig-grid {
-  text-align: center; /* Center teksten */
-  padding: 20px; /* Indvendig plads */
-}
-
-.video-container {
-  width: 100%; /* Fylder hele bredden */
-  max-width: 800px; /* Maksimal bredde for videoen */
-  margin: 0 auto 20px; /* Centrerer videoen og giver plads under den */
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
 }
 
 
-.lob-grid {
-  display: grid;
-  grid-template-columns: repeat(2,1fr); /* 2 lige store kolonner */
-  gap: 20px; /* Plads mellem kolonnerne */
-  width: 100%; /* Grid fylder hele containerens bredde */
+#social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
 }
 
-.lob-container {
-  background-color: #f9f9f9; /* Baggrundsfarve til containeren */
-  border: 1px solid #ddd; /* Kant omkring containeren */
-  border-radius: 8px; /* Runde hjørner */
-  overflow: hidden; /* Skjuler indhold der går ud over containerens grænser */
-  padding: 10px; /* Indvendig plads */
-  width: 100%; /* Fyld hele skærmbredden */
-  box-sizing: border-box; /* Inkluder padding og border i bredden */
+#social-links a {
+    margin: 0 10px;
+    text-decoration: none;
 }
 
-/* Specifikke regler for billeder inde i .lob-container */
-.lob-container .img-container {
-  width: 100%; /* Gør billedcontaineren responsiv */
-  height: auto;
-  grid-column: span 2; /* Fyld begge kolonner, hvis du vil */
+#social-links img {
+    width: 45px;
+    /* Adjust size as needed */
+    height: 45px;
+    /* Adjust size as needed */
+    transition: transform 0.3s;
 }
 
-/* Mobil-styling */
-@media (max-width: 600px) {
-  body {
-    font-size: 16px; /* Tilpas skriftstørrelsen, hvis nødvendigt */
+#social-links img:hover {
+    transform: scale(1.2);
+    /* Slightly enlarges the icon on hover */
+}
+
+#social-links a:nth-child(1) img {
+    /* Targets the first image in #social-links */
+    width: 30px;
+    /* Reduced size */
+    height: 30px;
+    /* Reduced size */
+}
+/* Lightbox container */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    justify-content: center; /* Centering content horizontally */
+    align-items: center; /* Centering content vertically */
   }
-
-  .om-mig-grid {
-    display: block; /* Ændre til block for at få indholdet til at stable sig i én kolonne */
-    text-align: center; /* Center teksten */
+  
+  /* Lightbox content */
+  .lightbox-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
-
-  .video-container {
-    margin: 0 auto 20px; /* Centrering og afstand under videoen */
+  
+  /* Images in the lightbox */
+  .lightbox-img {
+    display: none; /* Hide images by default */
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto; /* Center image */
+    object-fit: contain; /* Maintain aspect ratio */
   }
-
-  p {
-    margin: 0; /* Fjerne margin for at gøre teksten mere kompakt */
+  
+  /* Show the image in full-screen */
+  .lightbox-img.active {
+    display: block; /* Show the active image */
   }
-
-
-
-  .slider {
-    flex-direction: column; /* Skifter til kolonne-layout */
-    align-items: center; /* Centrerer indholdet */
-    overflow: hidden; /* Sørger for, at ingen billeder ryger ud af slideren */
+  
+  /* Close button */
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
   }
-
- 
-  .slides {
-    width: 100%; /* Gør billederne responsive */
-    height: auto; /* Bevarer billedforholdet */
-    display: block; /* Sørg for, at billederne vises som blok-elementer */
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
   }
-
-  .lob-grid {
-    grid-template-columns: 1fr; /* Enkelt kolonne-layout */
+  
+  .prev {
+    left: 0;
   }
+  
+  .next {
+    right: 0;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Adjust layout for mobile screens */
+    body {
+        font-size: 14px; /* Decrease font size for readability */
+    }
 
+    #landing {
+        height: 50vh; /* Reduce landing section height */
+    }
+
+    /* Section padding */
+    #about, #lob, #beach23 {
+        padding: 20px; /* Reduce padding */
+    }
+
+    /* Optimize the card layout for mobile */
+    .mine-lob-grid {
+        flex-direction: column; /* Change layout to a single column */
+        align-items: center;
+    }
+
+    .mine-lob-card {
+        width: 90%; /* Increase card width to fill more space */
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+
+    .mine-lob-card img {
+        max-width: 100%; /* Ensure images are responsive */
+    }
+
+    /* Button styles for mobile */
+    button {
+        width: 100%; /* Make buttons full-width */
+        padding: 15px; /* Increase padding */
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+        font-size: 12px; /* Reduce footer font size */
+    }
+
+    /* Social links */
+    #social-links img {
+        width: 35px; /* Reduce icon size */
+        height: 35px;
+    }
 }

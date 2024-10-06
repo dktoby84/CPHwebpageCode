@@ -1,53 +1,73 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Om Tobias Christiansen, en passioneret OCR-løber.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="OCR, obstacle course racing, Tobias Christiansen, træning">
+  <meta name="description" content="Overvind din frygt, en obstacle ad gangen! Følg Tobias Christiansen, en passioneret OCR-løber.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- giver the browser instructions on how to control the page dimensions and scaling  -->
+  <meta name="keywords" content="OCR, obstacle course racing, løb, Tobias Christiansen, træning">
   <meta name="author" content="Tobias Christiansen">
-  <title>Om mig</title>
+  <title>About Me</title>
   <link rel="stylesheet" href="../css/style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <header>
-    <h1>Om Tobias</h1>
-    <h2>Tobias Christiansen - OCR-løber</h2>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="om-mig.html">Om mig</a></li>
-      <li><a href="mine-lob.html">Mine løb</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="links.html">Links</a></li>
-    </ul>
-  </nav>
+<body>
+  <!-- Landing Section -->
+  <section id="landing">
+    <video autoplay muted loop id="bgVideo">
+        <source src="../data/ocr-mono.mp4" type="video/mp4">
+        Din browser understøtter ikke HTML5 video.
+    </video>
+    <div class="landing-content">
+        <img id="company-logo"
+            src="../data/lille-ocr-logo.png"
+            alt="Company Logo">
+        <h1>Overvind din frygt, en obstacle ad gangen!</h1>
+        <p>Tobias Christiansen</p>
+        <a href="../index.html"> <button>Home</button> </a>
+        
+    </div>
+</section>
+
+  
 
   <main>
-    <section>
-      <div class="om-mig-grid">
-        <div class="video-container">
-          <video autoplay loop muted>
-            <source src="../data/ocr.mp4" type="video/mp4">
-            Din browser understøtter ikke video.
-          </video>
-        </div>
-        <p>Hej, jeg er Tobias Christiansen, og jeg er en entusiastisk OCR-løber, der nyder at kaste mig ud i forhindringsløb på et hyggeligt niveau. Min rejse startede en kold januardag i 2023 i Dragør, hvor jeg første gang prøvede OCR. Siden da har jeg haft en fantastisk tid med at træne hos Battlefield OCR og WOW-fit.dk.
-    
-          Jeg har gennemført Nordic Race Beach to gange – en gang i 2023 og en anden i 2024 – og har også haft fornøjelsen af at deltage i Reborn Family Run sammen med min 10-årige datter. Det har været en sand fornøjelse at opleve denne aktivitet sammen med hende!
-    
-          Senest løb jeg Nordic Race Urban, og det var en sjov udfordring. Selvom jeg har dyrket CrossFit før, er jeg nu fokuseret på OCR og har gradvist lært at mestre de fleste forhindringer. Jeg har stadig brug for lidt hjælp her og der, men det er netop det, der gør det hele spændende.
-    
-          Jeg deltager ikke på eliteniveau – der er mange i Danmark, der er langt bedre end mig – men jeg finder stor glæde i at presse mig selv og have det sjovt på vejen. Hvis du har lyst til at høre mere om mine oplevelser eller måske tage med på et OCR-eventyr, så er du altid velkommen til at kontakte mig!
+    <section id="my-section">
+        <p>
+          Hej, jeg er en <span class="bold">OCR-løber</span>, der nyder at kaste mig ud i forhindringsløb på et hyggeligt niveau. Min rejse startede en <span class="highlight">kold januardag</span> i 2023 i Dragør, hvor jeg første gang prøvede OCR. Siden da har jeg haft en fantastisk tid med at træne hos <span class="italic">Battlefield OCR</span> og <span class="underline">WOW-fit.dk</span>.
+       
+      
+       
+          Jeg har gennemført <span class="bold">Nordic Race Beach</span> to gange – en gang i 2023 og en anden i 2024 – og har også haft fornøjelsen af at deltage i <span class="italic">Reborn Family Run</span> sammen med min <span class="highlight">10-årige datter</span>. Det har været en sand fornøjelse at opleve denne aktivitet sammen med hende!
+        
+      
+        <p>
+          Senest løb jeg <span class="bold">Nordic Race Urban</span>, og det var en sjov udfordring. Selvom jeg har dyrket <span class="underline">CrossFit</span> før, er jeg nu fokuseret på OCR og har gradvist lært at mestre de fleste forhindringer. Jeg har stadig brug for lidt hjælp her og der, men det er netop det, der gør det hele spændende.
         </p>
-      </div>
-    </section>
+      
+        <p>
+          Jeg deltager ikke på <span class="italic">eliteniveau</span> – der er mange i Danmark, der er langt bedre end mig – men jeg finder stor glæde i at presse mig selv og have det sjovt på vejen. Hvis du har lyst til at høre mere om mine oplevelser eller måske tage med på et <span class="bold">OCR-eventyr</span>, så er du altid velkommen til at kontakte mig!
+        </p>
+      </section>
+      
   </main>
 
-  <footer>
-    <p>&copy; Tobias Christiansen - 2024</p>
-  </footer>
+ <!-- Footer -->
+ <footer>
+    <p>Kontakt mig her: ocr@tobias.christiansen.com</p>
+    <div id="social-links">
+        <a href="#"><img
+            src="../data/facebook_logo.png"
+            alt="Facebook"></a>
+    <a href="#"><img
+            src="../data/instagram_logo.png"
+            alt="Instagram"></a>
+    <a href="#"><img
+            src="../data/linkedin_logo.png"
+            alt="LinkedIn"></a>
+    </div>
+</footer>
 </body>
+
 </html>
