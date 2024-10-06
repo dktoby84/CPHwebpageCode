@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="da">
+
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Overvind din frygt, en obstacle ad gangen! Følg Tobias Christiansen, en passioneret OCR-løber.">
@@ -8,119 +9,95 @@
   <meta name="author" content="Tobias Christiansen">
   <title>Overvind din frygt, en obstacle ad gangen!</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <header>
-    <h1>Overvind din frygt, en obstacle ad gangen!</h1>
-    <h2>Tobias Christiansen - OCR-løber</h2>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li> <!-- Link til startside -->
-      <li><a href="./html/om-mig.html">Om mig</a></li> <!-- Link til en anden HTML-fil -->
-      <li><a href="./html/mine-lob.html">Mine løb</a></li> <!-- Link til en anden HTML-fil -->
-      <li><a href="./html/blog.html">Blog</a></li> <!-- Link til en anden HTML-fil -->
-      <li><a href="./html/links.html">Links</a></li> <!-- Link til en anden HTML-fil -->
-    </ul>
-  </nav>
-  
-  <style>
-    main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; /* 3 lige store kolonner */
-  grid-gap: 20px;
-  padding: 20px;
-}
-
-/* Styling af sektioner */
-section {
-  background-color: transparent;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex; /* Justering af indhold */
-  align-items: flex; /* Justering af indhold */
-}
-  </style>
-
-  <main>
-    <section id="om-mig">
-      <h2>Om mig</h2>
-
-      <p>Jeg hedder Tobias Christiansen, og jeg er en passioneret OCR-løber på hobby niveau. </p>
-      <img src="./data/MeHanging.JPG" alt="Tobias Christiansen hængende i en obstacle">
-    </section>
     
-    <section id="mine-lob">
-      <h2>Mine Løb</h2>
-      <ul>
-          <li>
-              <h3>Nordic Race Beach 2023</h3>
-              <p>Dato: 6. maj 2023</p>
-          </li>
-          <li>
-              <h3>Nordic Race Beach 2024</h3>
-              <p>Dato: 5. maj 2024</p>
-          </li>
-          <li>
-              <h3>Reborn Family Run</h3>
-              <p>Dato: 25. maj 2024</p>
-              <p>Medvirkende: Min datter på 10 år</p>
-          </li>
-          <li>
-              <h3>Nordic Race Urban</h3>
-              <p>Dato: 7. Sep 2024</p>
-          </li>
-      </ul>
-      <p>
-          Næste løb er <strong id="next-race-name">Reborn Classic - Family Run</strong> og starter om:
-          <span id="countdown"></span> <!-- Countdown -->
-          <a href="https://www.reborn.dk/events/the-classic-family/" target="_blank">Klik her for at læse mere om næste løb</a>
-      </p>
-      <h3>Her er lidt billeder fra mit sidste Reborn løb</h3>
-      <div class="slider">
-          <button class="prevButton">Forrige</button>
-          
-          <div class="img-container">
-              <img class="slides" src="./data/reborn 2024/IMG_5867.JPEG" alt="ReBorn 1">
-              <img class="slides" src="./data/reborn 2024/IMG_5870.JPEG" alt="ReBorn 2">
-              <img class="slides" src="./data/reborn 2024/IMG_5874.JPEG" alt="ReBorn 3">
-              <img class="slides" src="./data/reborn 2024/IMG_5877.JPEG" alt="ReBorn 4">
-              <img class="slides" src="./data/reborn 2024/IMG_8514.JPEG" alt="ReBorn 5">
-          </div>
-          
-          <button class="nextButton">Næste</button>
-      </div>
-  </section>
-  
-
-    <section id="blog">
-      <h2>Blog</h2>
-      <article>
-        <h3>Mit seneste løb: Urban 2024</h3>
-        <p>Jeg gennemførte lige Nordic Race Urban på Reffen, og det var en fantastisk oplevelse!</p>
-        <a href="./html/blog-post-1.html">Læs mere...</a>
-        <h3>Hjernerystelse: Et gok i nøden</h3>
-        <p>Jeg lå og slappede af i min hængekøje da jeg lige pludselig fik den ene stolpe lige i hovedet.... av av av</p>
-        <img src="./data/stolpe.JPEG"
-      </article>
+<body>
+    <!-- Landing Section -->
+    <section id="landing">
+        <video autoplay muted loop id="bgVideo">
+            <source src="./data/ocr-mono.mp4" type="video/mp4">
+            Din browser understøtter ikke HTML5 video.
+        </video>
+        <div class="landing-content">
+            <img id="company-logo"
+                src="./data/lille-ocr-logo.png"
+                alt="Company Logo">
+            <h1>Overvind din frygt, en obstacle ad gangen!</h1>
+            <p>Tobias Christiansen</p>
+            <a href="./html/mine-lob.html"><button>Learn More About My Races</button> </a>
+        </div>
     </section>
 
-    </main>
+    <!-- About Section -->
+    <section id="about">
+        <a href="./html/om-mig.html"> <h2>About Me</h2> </a>
+        
+        <p>Jeg hedder Tobias Christiansen, og jeg er en passioneret OCR-løber på hobby niveau.</p>
+    </section>
 
-  <footer>
-    <p>&copy; Tobias Christiansen - 2024</p>
-  </footer>
+    <!-- Lob Section -->
+    <section id="lob">
+        <h2>Mine Løb - so far!</h2>
+        <div class="lobs-grid">
+            <div class="lob-card" id="lob1">
+                <!-- Link to image -->
+            <a href="javascript:void(0)" onclick="openLightbox(); showImage(0)">
+                <img src="./data/Beach23/beach_2023_finish.JPG" alt="nordic-beach">
+            </a>
+            
+            <!-- Lightbox container -->
+            <div id="lightbox" class="lightbox">
+                <span class="close" onclick="closeLightbox()">&times;</span>
+                
+                <!-- Images for the gallery -->
+                <div class="lightbox-content">
+                <img class="lightbox-img" src="./data/Beach23/beach_2023_start.JPG" alt="Beach 2023 start">
+                <img class="lightbox-img" src="./data/Beach23/beach_2023_atlas.JPG" alt="Beach 2023 1">
+                <img class="lightbox-img" src="./data/Beach23/beach_2023_finish.JPG" alt="Beach 2023 finish">
+                
+                </div>
+            
+                <!-- Navigation buttons -->
+                <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+                <a class="next" onclick="changeImage(1)">&#10095;</a>
+            </div>
+  
+                <p>Nordic Race - Beach 23</p>
+            </div>
+            <div class="lob-card" id="lob2">
+                <a href="../html/mine-lob.html#reborn24">
+                <img src="./data/reborn 2024/IMG_5870.JPEG"
+                    alt="Reborn">
+                </a>
+                <p>Reborn - Familiy Run 24</p>
+            </div>
+            <div class="lob-card" id="lob3">
+                <img src="./data/urban24/nordic_race_beach_2024.JPEG"
+                    alt="nordic-urban">
+                <p>Nordic - Urban</p>
+            </div>
+        </div>
+    </section>
 
-   <!-- Link til separate JS-filer -->
-  <script src="./js/countdown.js"></script>
-  <script src="./js/weather.js"></script>
-  <script src="./js/script-slider.js"></script>
-  <script src="./js/openFullscreen.js"></script>
-
+    <!-- Footer -->
+    <footer>
+        <p>Kontakt mig her: ocr@tobias.christiansen.com</p>
+        <div id="social-links">
+            <a href="#"><img
+                src="./data/facebook_logo.png"
+                alt="Facebook"></a>
+        <a href="#"><img
+                src="./data/instagram_logo.png"
+                alt="Instagram"></a>
+        <a href="#"><img
+                src="./data/linkedin_logo.png"
+                alt="LinkedIn"></a>
+        </div>
+    </footer>
+    <!-- Link to your lightbox.js file -->
+<script src="./js/lightbox.js"></script>
 
 </body>
+
 </html>
