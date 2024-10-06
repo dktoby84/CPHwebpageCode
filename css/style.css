@@ -161,7 +161,9 @@ button:hover {
 #my-section {
     color: white;
     text-align: center;
-    font-size: large; 
+    font-size: large;
+    background-color: #804343;
+    padding: 20px; 
   }
   
   #my-section .bold {
