@@ -252,7 +252,7 @@ footer {
   display: none; /* Hide images by default */
   width: 100%; /* Make the image fill the full width */
   height: 100%; /* Make the image fill the full height */
-  object-fit: cover; /* Maintain aspect ratio and cover the entire area */
+  object-fit: contain; /* Maintain aspect ratio and fit within the area */
 }
   
   /* Show the image in full-screen */
