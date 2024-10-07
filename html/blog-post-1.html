@@ -1,17 +1,36 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nordic Race Urban 2024 - Reffen</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <header>
-        <h1>Nordic Race Urban 2024</h1>
-    </header>
 
-    <main>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Overvind din frygt, en obstacle ad gangen! Følg Tobias Christiansen, en passioneret OCR-løber.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- giver the browser instructions on how to control the page dimensions and scaling  -->
+  <meta name="keywords" content="OCR, obstacle course racing, løb, Tobias Christiansen, træning">
+  <meta name="author" content="Tobias Christiansen">
+  <title>About Me</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- Landing Section -->
+  <section id="landing">
+    <video autoplay muted loop id="bgVideo">
+        <source src="../data/ocr-mono.mp4" type="video/mp4">
+        Din browser understøtter ikke HTML5 video.
+    </video>
+    <div class="landing-content">
+        <img id="company-logo"
+            src="../data/lille-ocr-logo.png"
+            alt="Company Logo">
+        <h1>Overvind din frygt, en obstacle ad gangen!</h1>
+        <p>Tobias Christiansen</p>
+        <a href="../index.html"> <button>Home</button> </a>
+        
+    </div>
+    </section>
+    <!-- About Section -->
+    <section id="my-section">
         <article>
             <h2>En oplevelse udover det sædvanlige</h2>
             <p>Nordic Race Urban 2024 på Reffen var uden tvivl en af de hårdeste udfordringer, jeg har gennemgået i år. Selvom jeg har prøvet mange OCR-løb, var dette noget helt særligt.</p>
@@ -24,14 +43,26 @@
 
             <p>På trods af smerten og udmattelsen var det dog en utrolig tilfredsstillelse at krydse målstregen og se tilbage på en udfordring, der virkelig testede mine grænser.</p>
         </article>
+    </section>
+    
+      
 
-        <nav>
-            <a href="../index.html">Tilbage til forsiden</a>
-        </nav>
-    </main>
-
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Mit OCR Eventyr</p>
-    </footer>
-</body>
-</html>
+       <p>Kontakt mig her: ocr@tobias.christiansen.com</p>
+       <div id="social-links">
+           <a href="#"><img
+               src="../data/facebook_logo.png"
+               alt="Facebook"></a>
+       <a href="#"><img
+               src="../data/instagram_logo.png"
+               alt="Instagram"></a>
+       <a href="#"><img
+               src="../data/linkedin_logo.png"
+               alt="LinkedIn"></a>
+       </div>
+   </footer>
+   </body>
+   
+   </html>
+   
