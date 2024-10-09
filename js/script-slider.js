@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
           // Knapper til navigation
           const prevButton = document.createElement('button');
-          prevButton.textContent = 'Forrige';
+          prevButton.textContent = 'Prev';
           prevButton.onclick = function(event) {
               event.stopPropagation(); // Stop click event fra at lukke fuldskærm
               index = (index - 1 + slides.length) % slides.length; // Gå til forrige slide
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
           };
 
           const nextButton = document.createElement('button');
-          nextButton.textContent = 'Næste';
+          nextButton.textContent = 'Next';
           nextButton.onclick = function(event) {
               event.stopPropagation(); // Stop click event fra at lukke fuldskærm
               index = (index + 1) % slides.length; // Gå til næste slide
