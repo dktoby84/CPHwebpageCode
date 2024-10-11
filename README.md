@@ -1,21 +1,23 @@
 # CPHwebpageCode
 # OCR Hjemmeside – Tobias Christiansen
 
-## Introduktion
-Dette projekt er en personlig hjemmeside, der har til formål at inspirere andre til at begynde med OCR (Obstacle Course Racing). Siden er skabt af Tobias Christiansen, en passioneret OCR-entusiast, og indeholder en kombination af indhold og design, der skal appellere til yngre mennesker og folk i 20-40-årsalderen, som overvejer at prøve OCR.
+Introduktion
+Denne hjemmeside er udviklet som en del af webudviklingsfaget. Formålet med hjemmesiden er at demonstrere de teknologier, der er blevet gennemgået i kurset, herunder HTML, CSS og JavaScript. Projektet har fokus på at skabe en brugervenlig og responsiv platform, der motiverer besøgende til at starte med OCR (Obstacle Course Racing).
 
-## Formål
-Hjemmesiden er designet med følgende formål:
-- At dele min rejse som OCR-deltager og motivere andre til at deltage.
-- At skabe en brugervenlig og responsiv platform, der tilpasser sig både mobil og desktop.
-- At fremhæve OCR-løb, træningstips og personlige erfaringer gennem billeder og videoer.
+
+## Formål - Formålet med denne hjemmeside er at:
+
+Motivere besøgende til at starte med OCR (Obstacle Course Racing) ved at dele min egen rejse som deltager.
+Skabe en brugervenlig og responsiv platform, der fungerer på både mobil og desktop, og som demonstrerer de teknologier, jeg har lært i webudviklingsfaget.
+Fremhæve OCR-løb, træningstips og personlige erfaringer gennem billeder, videoer og interaktive elementer for at inspirere andre.
 
 ## Layout Valg
-Jeg har valgt et **simpelt, moderne layout** med et ungt udtryk for at tiltrække målgruppen:
-- **Flexbox Layout**: Bruges til at skabe fleksible sektioner, der skalerer afhængigt af skærmstørrelse. Dette sikrer et responsivt design på tværs af enheder.
-- **Grid Layout**: Brugt i billedgallerier for at vise flere billeder i en klar og struktureret visning.
-- **Farvevalg**: Jeg har valgt en frisk og moderne farvepalet, der repræsenterer energi og bevægelse, som passer til OCR-temaet.
-- **Typografi**: Jeg har anvendt moderne skrifttyper, der er nemme at læse og giver et ungdommeligt udtryk.
+Jeg har valgt et simpelt, moderne layout med et ungt udtryk for at tiltrække målgruppen:
+- Flexbox Layout: Bruges til at skabe fleksible sektioner, der skalerer afhængigt af skærmstørrelse. Dette sikrer et responsivt design på tværs af enheder.
+- Grid Layout: Brugt i billedgalleriet for at vise flere billeder i en klar og struktureret visning.
+- Farvevalg: Jeg har valgt en frisk og moderne farvepalet, der repræsenterer energi og bevægelse, som passer til OCR-temaet.
+- Typografi: Jeg har anvendt moderne skrifttyper, der er nemme at læse og giver et ungdommeligt udtryk.
+
 
 ## Indhold
 Hjemmesiden indeholder følgende sektioner:
