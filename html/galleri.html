@@ -17,14 +17,17 @@
   <div class="kebab-menu">
     <span class="kebab-icon" onclick="toggleMenu()">&#x22EE;</span>
     <div id="menu" class="menu-list">
-      <a href="index.html">Home</a>
-      <a href="./html/mine-lob.html">Mine Løb</a>
-      <a href="./html/om-mig.html">About Me</a>
-      <a href="./html/contact.html">Contact</a>
+      <a href="../index.html">Home</a>
+      <a href="./mine-lob.html">Mine Løb</a>
+      <a href="./om-mig.html">About Me</a>
     </div>
   </div>
   <!-- Landing Section -->
   <section id="landing">
+    <video autoplay muted loop id="bgVideo">
+        <source src="./data/ocr-mono.mp4" type="video/mp4">
+        Din browser understøtter ikke HTML5 video.
+    </video>
        <div class="landing-content">
         <!img id="bghome"
         src="./data/MeHanging.JPG"
@@ -44,18 +47,15 @@
     <!-- Galleri Section -->
 <section id="galleri">
     <h2>Galleri</h2>
-    <div class="mine-lob-grid"> <!-- Use .mine-lob-grid to apply your existing flex styles -->
+    <div class="mine-lob-grid"> 
         <div class="mine-lob-card"> <!-- Use .mine-lob-card for consistent styling -->
             <img src="../data/Beach23/beach_2023_finish.JPG" alt="Nordic Beach 2023" onclick="openFullscreen(this)">
-            <p>Nordic Beach 2023</p> <!-- Optional: Add a caption -->
         </div>
         <div class="mine-lob-card"> <!-- Use .mine-lob-card for consistent styling -->
             <img src="../data/Beach24/20240504_095656_Original.JPG" alt="Nordic Beach 2024" onclick="openFullscreen(this)">
-            <p>Nordic Beach 2024</p> <!-- Optional: Add a caption -->
         </div>
         <div class="mine-lob-card"> <!-- Use .mine-lob-card for consistent styling -->
             <img src="../data/reborn 2024/IMG_5867.JPEG" alt="Reborn 2024" onclick="openFullscreen(this)">
-            <p>Reborn 2024</p> <!-- Optional: Add a caption -->
         </div>
         <!-- Add more images here as needed -->
     </div>
@@ -101,6 +101,7 @@
       };
     }
   </script>
+  <script src="../js/kebabMenu.js"></script>
 </body>
 
 </html>
