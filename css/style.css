@@ -65,13 +65,41 @@ body {
   text-align: center;
   background-color: #fffbfb;
 }
+
 #galleri {
   padding: 40px;
-  display: flex;
-  flex-direction: column;
   text-align: center;
   background-color: #eee;
 }
+
+.galleri-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; 
+  justify-items: center; 
+}
+
+.galleri-item {
+  width: 300px;  /* Fastsat bredde */
+  height: 300px; /* Fastsat højde */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galleri-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.galleri-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Bevarer proportioner uden at forvrænge billedet */
+}
+
+
 #stolpe {
   width: 250px;
   height: 250px;
