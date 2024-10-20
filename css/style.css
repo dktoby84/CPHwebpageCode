@@ -454,4 +454,13 @@ footer {
         width: 35px; /* Reduce icon size */
         height: 35px;
     }
-}
+    
+    .galleri-grid {
+      grid-template-columns: repeat(2, 1fr); /* Change to two columns on mobile */
+    }
+
+    .galleri-item {
+      width: 100%; /* Full width for better responsiveness */
+      height: 200px; /* Adjust height if needed */
+    }
+  }
