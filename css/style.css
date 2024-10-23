@@ -117,8 +117,17 @@ body {
     background-color: #fff;
 }
 
+.lobs-grid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
 .lob-card {
-  width: 200px; 
+  width: 250px; 
   height: auto;
   display: flex;
   flex-direction: column;
@@ -154,14 +163,6 @@ body {
     font-weight: 500;
 }
 
-.lobs-grid {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 900px;
-    flex-wrap: nowrap;
-    gap: 20px;
-}
 
 #beach23 {
   padding: 40px;
