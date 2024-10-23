@@ -383,16 +383,24 @@ footer {
         padding: 20px; 
     }
     .lobs-grid {
-      flex-direction: row; 
+      flex-direction: column; /* Billeder i kolonne */
       align-items: center;
-      }
-    .lob-card {
-      width: 90%; 
-      margin-bottom: 20px; 
-    }
-    .lob-card img {
-      height: 150px; 
-      object-fit: cover; 
+      width: 100%; /* Fylder hele bredden af visningsområdet */
+      gap: 20px; /* Mellemrum mellem billeder */
+  }
+
+  .lob-card {
+      width: 90%; /* Fylder det meste af skærmen */
+      margin-bottom: 20px; /* Afstand mellem kortene */
+      display: flex;
+      justify-content: center;
+  }
+
+  .lob-card img {
+      width: 100%; /* Fyld kortets bredde */
+      height: 150px; /* Ensartet højde */
+      object-fit: cover; /* Bevar billedforhold uden strækning */
+      border-radius: 5px;
   }
 
     .mine-lob-grid {
