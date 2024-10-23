@@ -383,7 +383,7 @@ footer {
 
   .lob-card img {
       width: 100%; /* Fyld kortets bredde */
-      height: 150px; /* Ensartet højde */
+      height: 100px; /* Ensartet højde */
       object-fit: cover; /* Bevar billedforhold uden strækning */
       border-radius: 5px;
   }
