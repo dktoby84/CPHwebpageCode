@@ -14,8 +14,6 @@ body {
     justify-content: center;
     color: #fff;
     overflow: hidden;
-    
-
 }
 
 .landing-content {
@@ -120,7 +118,7 @@ body {
 }
 
 .lob-card {
-  width: 150px; 
+  width: 200px; 
   height: auto;
   display: flex;
   flex-direction: column;
@@ -146,7 +144,7 @@ body {
 
 .lob-card img {
   width: 100%; 
-  height: 200px; 
+  height: 150px; 
   object-fit: cover; 
   border-radius: 5px;
 }
