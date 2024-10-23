@@ -405,8 +405,9 @@ footer {
   }
 
     .mine-lob-grid {
-        flex-direction: column; 
-        align-items: center;
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
     }
 
     .mine-lob-card {
