@@ -347,7 +347,7 @@ footer {
     }
 
     /* Section padding */
-    #about, #lob, #beach23 {
+    #about, #lob, #mine-lob {
         padding: 20px; 
     }
     .lobs-grid {
@@ -373,17 +373,17 @@ footer {
   }
 
     .mine-lob-grid {
-      display: flex;
-      flex-direction: column; 
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
       align-items: center;
     }
 
-    .mine-lob-card {
+    .mine-lob-item {
         width: 90%; 
         margin-bottom: 20px; 
     }
 
-    .mine-lob-card img {
+    .mine-lob-item img {
         max-width: 100%; 
     }
     button {
@@ -403,6 +403,7 @@ footer {
     }
     
     .galleri-grid {
+      display: grid;
       grid-template-columns: repeat(2, 1fr); 
     }
 
