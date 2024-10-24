@@ -285,6 +285,31 @@ button:hover {
     font-weight: bold; 
   }
   
+.question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; /* Afstand mellem knapperne */
+}
+
+.response-button {
+    padding: 10px 15px;
+    background-color: #4CAF50; /* Grøn baggrund */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.response-button:hover {
+    background-color: #45a049; /* Mørkere grøn ved hover */
+}
 
 footer {
     padding: 20px;
