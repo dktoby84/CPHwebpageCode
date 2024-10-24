@@ -64,15 +64,15 @@
             <div class="lob-card">
             <img src="./data/Beach24/20240504_095656_Original.JPG" alt="nordic-beach24" onclick="openFullscreen(this)">
             
-              <p>Nordic Race - Beach 24</p>
+              <p onclick="navigateToSection()">Nordic Race - Beach 24</p>
             </div>
             <div class="lob-card">
                 <img src="./data/reborn 2024/finish.JPG" alt="Reborn" onclick="openFullscreen(this)">
-              <p>Reborn - Familiy Run 24</p>
+              <p onclick="navigateToSection()">Reborn - Family Run 25</p>
             </div>
             <div class="lob-card">
               <img src="./data/urban24/finish.JPEG" alt="nordic race -urban 24 finished" onclick="openFullscreen(this)">
-                <p>Nordic Race - Urban 24</p>
+                <p onclick="navigateToSection()">Nordic Race - Urban 24</p>
             </div>
             
         </div>
@@ -140,8 +140,8 @@
 <script src="./js/openFullscreen(img).js"></script>
 <script src="./js/questionChart.js"></script>
 
-function navigateToSection() {
-    window.location.href = 'mine-lob.html#nordic-race-beach-23';
+function navigateToSection(sectionId) {
+    window.location.href = 'mine-lob.html#' + sectionId;
 }
 </body>
 
