@@ -1,5 +1,5 @@
-let yesCount = 0;
-let noCount = 0;
+let yesCount = localStorage.getItem('yesCount') ? parseInt(localStorage.getItem('yesCount')) : 0;
+let noCount = localStorage.getItem('noCount') ? parseInt(localStorage.getItem('noCount')) : 0;
 
 const ctx = document.getElementById('responseChart').getContext('2d');
 const chart = new Chart(ctx, {
@@ -26,8 +26,10 @@ const chart = new Chart(ctx, {
 function updateChart(answer) {
     if (answer === 'yes') {
         yesCount++;
+        localStorage.setItem('yesCount', yesCount);
     } else {
         noCount++;
+        localStorage.setItem('noCount', noCount);
     }
     
     // Opdater grafens data
