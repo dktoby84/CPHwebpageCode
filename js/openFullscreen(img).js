@@ -1,18 +1,15 @@
 let currentMediaIndex = 0;
-let mediaElements = []; // Array til billeder og videoer
+let mediaElements = [];
 
 function openFullscreen(media) {
-    // Undgå fuldskærmsvisning for video med id 'bgVideo' eller billeder/ikoner med klassen 'exclude-icon'
     if (media.id === 'bgVideo' || media.classList.contains('exclude-icon')) {
         return;
     }
 
-    // Find alle billeder og videoer undtagen dem med klassen 'exclude-icon' eller id 'bgVideo'
     const mediaList = document.querySelectorAll('img:not(.exclude-icon), video:not(#bgVideo)');
-    mediaElements = Array.from(mediaList); // Lav en array af både billeder og videoer uden ekskluderede elementer
-    currentMediaIndex = mediaElements.indexOf(media); // Find indekset for det valgte medie
+    mediaElements = Array.from(mediaList);
+    currentMediaIndex = mediaElements.indexOf(media);
 
-    // Opret en div til fuldskærmsvisning
     const fullScreenDiv = document.createElement('div');
     fullScreenDiv.style.position = 'fixed';
     fullScreenDiv.style.top = 0;
@@ -22,10 +19,9 @@ function openFullscreen(media) {
     fullScreenDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
     fullScreenDiv.style.display = 'flex';
     fullScreenDiv.style.alignItems = 'center';
-    fullScreenDiv.style.justifyContent = 'center';
+    fullScreenDiv.style.justifyContent = 'space-between';
     fullScreenDiv.style.zIndex = 1000;
 
-    // Opret det valgte medie (billede eller video) i fuldskærmsvisning
     let fullScreenMedia;
     if (media.tagName === 'IMG') {
         fullScreenMedia = document.createElement('img');
@@ -41,11 +37,12 @@ function openFullscreen(media) {
         fullScreenMedia.style.maxHeight = '90%';
     }
 
-    // Opret knapper til at navigere mellem billeder og videoer
     const nextBtn = document.createElement('button');
     nextBtn.innerHTML = '>';
     nextBtn.style.position = 'absolute';
     nextBtn.style.right = '20px';
+    nextBtn.style.top = '50%';
+    nextBtn.style.transform = 'translateY(-50%)';
     nextBtn.style.fontSize = '2rem';
     nextBtn.style.background = 'none';
     nextBtn.style.color = 'white';
@@ -59,6 +56,8 @@ function openFullscreen(media) {
     prevBtn.innerHTML = '<';
     prevBtn.style.position = 'absolute';
     prevBtn.style.left = '20px';
+    prevBtn.style.top = '50%';
+    prevBtn.style.transform = 'translateY(-50%)';
     prevBtn.style.fontSize = '2rem';
     prevBtn.style.background = 'none';
     prevBtn.style.color = 'white';
@@ -73,14 +72,12 @@ function openFullscreen(media) {
     fullScreenDiv.appendChild(nextBtn);
     document.body.appendChild(fullScreenDiv);
 
-    // Luk fuldskærmsvisning når man klikker uden for mediet
     fullScreenDiv.onclick = function (e) {
         if (e.target === fullScreenDiv) {
             document.body.removeChild(fullScreenDiv);
         }
     };
 
-    // Tilføj tastaturkontrol
     document.onkeydown = function (e) {
         if (e.key === 'ArrowRight') {
             nextMedia(fullScreenMedia);
@@ -98,13 +95,13 @@ function nextMedia(mediaElement) {
 
     if (nextMedia.tagName === 'IMG') {
         mediaElement.src = nextMedia.src;
-        mediaElement.tagName === 'VIDEO' && mediaElement.pause(); // Stop video, hvis det er en video
+        mediaElement.tagName === 'VIDEO' && mediaElement.pause();
     } else if (nextMedia.tagName === 'VIDEO') {
         const newVideo = document.createElement('video');
         newVideo.src = nextMedia.src;
         newVideo.controls = true;
         newVideo.autoplay = true;
-        mediaElement.replaceWith(newVideo); // Erstat billede/video med den nye video
+        mediaElement.replaceWith(newVideo);
     }
 }
 
@@ -114,12 +111,12 @@ function prevMedia(mediaElement) {
 
     if (prevMedia.tagName === 'IMG') {
         mediaElement.src = prevMedia.src;
-        mediaElement.tagName === 'VIDEO' && mediaElement.pause(); // Stop video, hvis det er en video
+        mediaElement.tagName === 'VIDEO' && mediaElement.pause();
     } else if (prevMedia.tagName === 'VIDEO') {
         const newVideo = document.createElement('video');
         newVideo.src = prevMedia.src;
         newVideo.controls = true;
         newVideo.autoplay = true;
-        mediaElement.replaceWith(newVideo); // Erstat billede/video med den nye video
+        mediaElement.replaceWith(newVideo);
     }
 }
