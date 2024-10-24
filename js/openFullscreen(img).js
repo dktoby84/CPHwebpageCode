@@ -37,35 +37,7 @@ function openFullscreen(media) {
         fullScreenMedia.style.maxHeight = '90%';
     }
 
-    const nextBtn = document.createElement('button');
-    nextBtn.innerHTML = '>';
-    nextBtn.style.position = 'absolute';
-    nextBtn.style.right = '20px';
-    nextBtn.style.fontSize = '2rem';
-    nextBtn.style.background = 'none';
-    nextBtn.style.color = '#ff4500';
-    nextBtn.style.border = 'none';
-    nextBtn.style.cursor = 'pointer';
-    nextBtn.onclick = function () {
-        nextMedia(fullScreenMedia);
-    };
-
-    const prevBtn = document.createElement('button');
-    prevBtn.innerHTML = '<';
-    prevBtn.style.position = 'absolute';
-    prevBtn.style.left = '20px';
-    prevBtn.style.fontSize = '2rem';
-    prevBtn.style.background = 'none';
-    prevBtn.style.color = '#ff4500';
-    prevBtn.style.border = 'none';
-    prevBtn.style.cursor = 'pointer';
-    prevBtn.onclick = function () {
-        prevMedia(fullScreenMedia);
-    };
-
-    fullScreenDiv.appendChild(prevBtn);
     fullScreenDiv.appendChild(fullScreenMedia);
-    fullScreenDiv.appendChild(nextBtn);
     document.body.appendChild(fullScreenDiv);
 
     fullScreenDiv.onclick = function (e) {
