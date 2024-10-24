@@ -19,7 +19,7 @@ function openFullscreen(media) {
     fullScreenDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
     fullScreenDiv.style.display = 'flex';
     fullScreenDiv.style.alignItems = 'center';
-    fullScreenDiv.style.justifyContent = 'space-between';
+    fullScreenDiv.style.justifyContent = 'center';
     fullScreenDiv.style.zIndex = 1000;
 
     let fullScreenMedia;
@@ -41,11 +41,9 @@ function openFullscreen(media) {
     nextBtn.innerHTML = '>';
     nextBtn.style.position = 'absolute';
     nextBtn.style.right = '20px';
-    nextBtn.style.top = '50%';
-    nextBtn.style.transform = 'translateY(-50%)';
     nextBtn.style.fontSize = '2rem';
     nextBtn.style.background = 'none';
-    nextBtn.style.color = 'white';
+    nextBtn.style.color = '#ff4500';
     nextBtn.style.border = 'none';
     nextBtn.style.cursor = 'pointer';
     nextBtn.onclick = function () {
@@ -56,11 +54,9 @@ function openFullscreen(media) {
     prevBtn.innerHTML = '<';
     prevBtn.style.position = 'absolute';
     prevBtn.style.left = '20px';
-    prevBtn.style.top = '50%';
-    prevBtn.style.transform = 'translateY(-50%)';
     prevBtn.style.fontSize = '2rem';
     prevBtn.style.background = 'none';
-    prevBtn.style.color = 'white';
+    prevBtn.style.color = '#ff4500';
     prevBtn.style.border = 'none';
     prevBtn.style.cursor = 'pointer';
     prevBtn.onclick = function () {
