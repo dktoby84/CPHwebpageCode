@@ -58,7 +58,7 @@
         <div class="lobs-grid">
             <div class="lob-card">
               <img src="./data/Beach23/beach_2023_finish.JPG" alt="nordic-beach" onclick="openFullscreen(this)">
-              <p>Nordic Race - Beach 23</p>
+              <p onclick="navigateToSection()">Nordic Race - Beach 23</p>
             </div>
                     
             <div class="lob-card">
@@ -140,6 +140,9 @@
 <script src="./js/openFullscreen(img).js"></script>
 <script src="./js/questionChart.js"></script>
 
+function navigateToSection() {
+    window.location.href = 'mine-lob.html#nordic-race-beach-23';
+}
 </body>
 
 </html>
