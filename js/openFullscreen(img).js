@@ -26,20 +26,22 @@ function openFullscreen(media) {
     if (media.tagName === 'IMG') {
         fullScreenMedia = document.createElement('img');
         fullScreenMedia.src = media.src;
-        fullScreenMedia.style.maxWidth = '100%';
-        fullScreenMedia.style.maxHeight = '100%';
+        fullScreenMedia.style.width = '100%';
+        fullScreenMedia.style.height = '100%';
+        fullScreenMedia.style.objectFit = 'contain';
     } else if (media.tagName === 'VIDEO') {
         fullScreenMedia = document.createElement('video');
         fullScreenMedia.src = media.src;
         fullScreenMedia.controls = true;
         fullScreenMedia.autoplay = true;
-        fullScreenMedia.style.maxWidth = '100%';
-        fullScreenMedia.style.maxHeight = '100%';
+        fullScreenMedia.style.width = '100%';
+        fullScreenMedia.style.height = '100%';
+        fullScreenMedia.style.objectFit = 'contain';
     }
 
     fullScreenDiv.appendChild(fullScreenMedia);
 
-    // Create "Next" button
+    // Next button
     const nextButton = document.createElement('button');
     nextButton.innerText = '>';
     nextButton.style.position = 'absolute';
@@ -47,12 +49,15 @@ function openFullscreen(media) {
     nextButton.style.top = '50%';
     nextButton.style.transform = 'translateY(-50%)';
     nextButton.style.padding = '10px';
-    nextButton.style.fontSize = '1.5em';
+    nextButton.style.fontSize = '2em';
     nextButton.style.cursor = 'pointer';
+    nextButton.style.color = '#f8f4f42e';
+    nextButton.style.backgroundColor = 'transparent';
+    nextButton.style.border = 'none';
     nextButton.onclick = () => nextMedia(fullScreenMedia);
     fullScreenDiv.appendChild(nextButton);
 
-    // Create "Previous" button
+    // Previous button
     const prevButton = document.createElement('button');
     prevButton.innerText = '<';
     prevButton.style.position = 'absolute';
@@ -60,18 +65,30 @@ function openFullscreen(media) {
     prevButton.style.top = '50%';
     prevButton.style.transform = 'translateY(-50%)';
     prevButton.style.padding = '10px';
-    prevButton.style.fontSize = '1.5em';
+    prevButton.style.fontSize = '2em';
     prevButton.style.cursor = 'pointer';
+    prevButton.style.color = '#f8f4f42e';
+    prevButton.style.backgroundColor = 'transparent';
+    prevButton.style.border = 'none';
     prevButton.onclick = () => prevMedia(fullScreenMedia);
     fullScreenDiv.appendChild(prevButton);
 
-    document.body.appendChild(fullScreenDiv);
+    // Close button
+    const closeButton = document.createElement('button');
+    closeButton.innerText = 'X';
+    closeButton.style.position = 'absolute';
+    closeButton.style.top = '20px';
+    closeButton.style.right = '20px';
+    closeButton.style.padding = '5px 10px';
+    closeButton.style.fontSize = '1.5em';
+    closeButton.style.cursor = 'pointer';
+    closeButton.style.color = '#f8f4f42e';
+    closeButton.style.backgroundColor = 'transparent';
+    closeButton.style.border = 'none';
+    closeButton.onclick = () => document.body.removeChild(fullScreenDiv);
+    fullScreenDiv.appendChild(closeButton);
 
-    fullScreenDiv.onclick = function (e) {
-        if (e.target === fullScreenDiv) {
-            document.body.removeChild(fullScreenDiv);
-        }
-    };
+    document.body.appendChild(fullScreenDiv);
 
     document.onkeydown = function (e) {
         if (e.key === 'ArrowRight') {
@@ -96,8 +113,8 @@ function nextMedia(mediaElement) {
         newVideo.src = nextMedia.src;
         newVideo.controls = true;
         newVideo.autoplay = true;
-        newVideo.style.maxWidth = '100%';
-        newVideo.style.maxHeight = '100%';
+        newVideo.style.width = '100%';
+        newVideo.style.height = '100%';
         mediaElement.replaceWith(newVideo);
     }
 }
@@ -114,8 +131,8 @@ function prevMedia(mediaElement) {
         newVideo.src = prevMedia.src;
         newVideo.controls = true;
         newVideo.autoplay = true;
-        newVideo.style.maxWidth = '100%';
-        newVideo.style.maxHeight = '100%';
+        newVideo.style.width = '100%';
+        newVideo.style.height = '100%';
         mediaElement.replaceWith(newVideo);
     }
 }
