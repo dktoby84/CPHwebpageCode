@@ -26,18 +26,45 @@ function openFullscreen(media) {
     if (media.tagName === 'IMG') {
         fullScreenMedia = document.createElement('img');
         fullScreenMedia.src = media.src;
-        fullScreenMedia.style.maxWidth = '90%';
-        fullScreenMedia.style.maxHeight = '90%';
+        fullScreenMedia.style.maxWidth = '100%';
+        fullScreenMedia.style.maxHeight = '100%';
     } else if (media.tagName === 'VIDEO') {
         fullScreenMedia = document.createElement('video');
         fullScreenMedia.src = media.src;
         fullScreenMedia.controls = true;
         fullScreenMedia.autoplay = true;
-        fullScreenMedia.style.maxWidth = '90%';
-        fullScreenMedia.style.maxHeight = '90%';
+        fullScreenMedia.style.maxWidth = '100%';
+        fullScreenMedia.style.maxHeight = '100%';
     }
 
     fullScreenDiv.appendChild(fullScreenMedia);
+
+    // Create "Next" button
+    const nextButton = document.createElement('button');
+    nextButton.innerText = '>';
+    nextButton.style.position = 'absolute';
+    nextButton.style.right = '20px';
+    nextButton.style.top = '50%';
+    nextButton.style.transform = 'translateY(-50%)';
+    nextButton.style.padding = '10px';
+    nextButton.style.fontSize = '1.5em';
+    nextButton.style.cursor = 'pointer';
+    nextButton.onclick = () => nextMedia(fullScreenMedia);
+    fullScreenDiv.appendChild(nextButton);
+
+    // Create "Previous" button
+    const prevButton = document.createElement('button');
+    prevButton.innerText = '<';
+    prevButton.style.position = 'absolute';
+    prevButton.style.left = '20px';
+    prevButton.style.top = '50%';
+    prevButton.style.transform = 'translateY(-50%)';
+    prevButton.style.padding = '10px';
+    prevButton.style.fontSize = '1.5em';
+    prevButton.style.cursor = 'pointer';
+    prevButton.onclick = () => prevMedia(fullScreenMedia);
+    fullScreenDiv.appendChild(prevButton);
+
     document.body.appendChild(fullScreenDiv);
 
     fullScreenDiv.onclick = function (e) {
@@ -63,12 +90,14 @@ function nextMedia(mediaElement) {
 
     if (nextMedia.tagName === 'IMG') {
         mediaElement.src = nextMedia.src;
-        mediaElement.tagName === 'VIDEO' && mediaElement.pause();
+        if (mediaElement.tagName === 'VIDEO') mediaElement.pause();
     } else if (nextMedia.tagName === 'VIDEO') {
         const newVideo = document.createElement('video');
         newVideo.src = nextMedia.src;
         newVideo.controls = true;
         newVideo.autoplay = true;
+        newVideo.style.maxWidth = '100%';
+        newVideo.style.maxHeight = '100%';
         mediaElement.replaceWith(newVideo);
     }
 }
@@ -79,12 +108,14 @@ function prevMedia(mediaElement) {
 
     if (prevMedia.tagName === 'IMG') {
         mediaElement.src = prevMedia.src;
-        mediaElement.tagName === 'VIDEO' && mediaElement.pause();
+        if (mediaElement.tagName === 'VIDEO') mediaElement.pause();
     } else if (prevMedia.tagName === 'VIDEO') {
         const newVideo = document.createElement('video');
         newVideo.src = prevMedia.src;
         newVideo.controls = true;
         newVideo.autoplay = true;
+        newVideo.style.maxWidth = '100%';
+        newVideo.style.maxHeight = '100%';
         mediaElement.replaceWith(newVideo);
     }
 }
