@@ -51,7 +51,7 @@ function openFullscreen(media) {
     nextButton.style.padding = '10px';
     nextButton.style.fontSize = '2em';
     nextButton.style.cursor = 'pointer';
-    nextButton.style.color = '#f8f4f42e';
+    nextButton.style.color = '#ff4500';
     nextButton.style.backgroundColor = 'transparent';
     nextButton.style.border = 'none';
     nextButton.onclick = () => nextMedia(fullScreenMedia);
@@ -67,7 +67,7 @@ function openFullscreen(media) {
     prevButton.style.padding = '10px';
     prevButton.style.fontSize = '2em';
     prevButton.style.cursor = 'pointer';
-    prevButton.style.color = '#f8f4f42e';
+    prevButton.style.color = '#ff4500';
     prevButton.style.backgroundColor = 'transparent';
     prevButton.style.border = 'none';
     prevButton.onclick = () => prevMedia(fullScreenMedia);
@@ -82,7 +82,7 @@ function openFullscreen(media) {
     closeButton.style.padding = '5px 10px';
     closeButton.style.fontSize = '1.5em';
     closeButton.style.cursor = 'pointer';
-    closeButton.style.color = '#f8f4f42e';
+    closeButton.style.color = '#ff4500';
     closeButton.style.backgroundColor = 'transparent';
     closeButton.style.border = 'none';
     closeButton.onclick = () => document.body.removeChild(fullScreenDiv);
