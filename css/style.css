@@ -6,6 +6,7 @@ body {
 }
 #language-switch {
     position: fixed;
+    z-index: 100;
     top: 10px;
     right: 10px;
     font-family: 'Montserrat', sans-serif;
