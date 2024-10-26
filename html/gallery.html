@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Overcome your fears, one obstacle at a time! Follow Tobias Christiansen, a passionate OCR runner.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="OCR, obstacle course racing, running, Tobias Christiansen, training">
+  <meta name="author" content="Tobias Christiansen">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+  <!-- Navigation Menu (Kebab Menu) -->
+  <div class="kebab-menu">
+    <span class="kebab-icon" onclick="toggleMenu()">&#x22EE;</span>
+    <div id="menu" class="menu-list">
+      <a href="../index-en.html">Home</a>
+      <a href="./my-run.html">My Races</a>
+      <a href="./about-me.html">About Me</a>
+    </div>
+  </div>
+  <!-- Landing Section -->
+  <section id="landing">
+    <video autoplay muted loop id="bgVideo">
+        <source src="./data/ocr-mono.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+       <div class="landing-content">
+        <!img id="bghome"
+        src="./data/MeHanging.JPG"
+        alt="me hanging"-->
+
+        <img id="company-logo"
+            src="./data/lille-ocr-logo.png" class="exclude-icon"
+            alt="Company Logo">
+        <h1>Overcome your fears, one obstacle at a time!</h1>
+        <p>Gallery</p>
+        <a href="../index-en.html"><button>Home</button> </a>
+    </div>
+    </section>
+
+   <!-- Gallery Section -->
+<section id="gallery">
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="../data/Beach23/beach_2023_start.JPG" 
+                 alt="Nordic Beach 23 - start" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+          <img src="../data/Beach23/beach_2023_atlas.JPG" 
+               alt="Nordic Beach 23 - atlas stone" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+          <img src="../data/Beach23/cranie.jpg" 
+              alt="Nordic Beach 23 - skull" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+          <img src="../data/Beach23/beach_2023_finish.JPG" 
+              alt="Nordic Beach 23 - finish" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+          <img src="../data/Beach24/sving.jpg" 
+              alt="Nordic Beach 23 - start" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+          <img src="../data/Beach24/hop i vand.jpg" 
+              alt="Nordic Beach 23 - start" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="../data/Beach24/20240504_091550_Original.JPG" 
+                 alt="Nordic Beach 23 - atlas stone" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="../data/Beach24/20240504_095656_Original.JPG" 
+                 alt="Nordic Beach 23 - finish" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="../data/reborn 2024/IMG_5867.JPEG" 
+                 alt="Reborn 2024" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+          <video src="../data/Beach23/jump into the water movie.mp4" 
+               alt="Reborn 2024" controls onclick="openFullscreen(this)"></video>
+      </div>
+        <div class="gallery-item">
+            <img src="../data/reborn 2024/armgang.JPEG" 
+                 alt="Reborn 2024" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+            <img src="../data/reborn 2024/IMG_5874.JPEG" 
+                 alt="Reborn 2024" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+          <img src="../data/reborn 2024/start.JPEG" 
+               alt="Reborn 2024" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+          <img src="../data/reborn 2024/box.JPEG" 
+               alt="Reborn 2024" onclick="openFullscreen(this)">
+        </div>
+        <div class="gallery-item">
+            <video src="../data/Beach24/20240504_094721.mp4" 
+                 alt="Reborn 2024" controls onclick="openFullscreen(this)"></video>
+        </div>
+    </div>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Contact me here: ocr@tobias.christiansen.com</p>
+    <div id="social-links">
+      <a href="#"><img src="../data/facebook_logo.png" class="exclude-icon" alt="Facebook"></a>
+      <a href="#"><img src="../data/instagram_logo.png" class="exclude-icon" alt="Instagram"></a>
+      <a href="#"><img src="../data/linkedin_logo.png" class="exclude-icon" alt="LinkedIn"></a>
+    </div>
+  </footer>
+
+  <script src="../js/openFullscreen(img).js"></script>
+  <script src="../js/kebabMenu.js"></script>
+</body>
+
+</html>
