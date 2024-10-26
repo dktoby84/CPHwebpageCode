@@ -2,8 +2,8 @@ let yesCount = localStorage.getItem('yesCount') ? parseInt(localStorage.getItem(
 let noCount = localStorage.getItem('noCount') ? parseInt(localStorage.getItem('noCount')) : 0;
 
 function updateDisplay() {
-    document.getElementById('yesCountDisplay').innerText = `Ja: ${yesCount}`;
-    document.getElementById('noCountDisplay').innerText = `Nej: ${noCount}`;
+    document.getElementById('yesCountDisplay').innerText = `Yes: ${yesCount}`;
+    document.getElementById('noCountDisplay').innerText = `No: ${noCount}`;
 }
 
 function updateChart(answer) {
