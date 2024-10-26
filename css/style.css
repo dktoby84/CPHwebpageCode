@@ -5,7 +5,7 @@ body {
     background-color: #f5f5f5;
 }
 #language-switch {
-    position: fixed;
+    position: absolute;
     z-index: 100;
     top: 10px;
     right: 10px;
