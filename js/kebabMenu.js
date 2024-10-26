@@ -21,6 +21,6 @@ function switchLanguage(lang) {
   if (lang === 'da') {
     window.location.href = 'index.html'; // Link to the Danish version
   } else if (lang === 'en') {
-    window.location.href = '.html/index-en.html'; // Link to the English version
+    window.location.href = 'html/index-en.html'; // Link to the English version
   }
 }
