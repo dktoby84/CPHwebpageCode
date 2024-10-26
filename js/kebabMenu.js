@@ -16,3 +16,16 @@ window.onclick = function(event) {
         }
     }
 }
+
+function switchLanguage(language) {
+  const currentPath = window.location.pathname;
+  let newPath = currentPath;
+
+  if (language === 'da') {
+    newPath = newPath.replace('/en/', '/da/');
+  } else if (language === 'en') {
+    newPath = newPath.replace('/da/', '/en/');
+  }
+
+  window.location.href = newPath;
+}
