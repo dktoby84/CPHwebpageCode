@@ -17,15 +17,10 @@ window.onclick = function(event) {
     }
 }
 
-function switchLanguage(language) {
-  const currentPath = window.location.pathname;
-  let newPath = currentPath;
-
-  if (language === 'da') {
-    newPath = newPath.replace('/en/', '/da/');
-  } else if (language === 'en') {
-    newPath = newPath.replace('/da/', '/en/');
+function switchLanguage(lang) {
+  if (lang === 'da') {
+    window.location.href = 'index.html'; // Link to the Danish version
+  } else if (lang === 'en') {
+    window.location.href = 'index-en.html'; // Link to the English version
   }
-
-  window.location.href = newPath;
 }
