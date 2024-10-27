@@ -1,3 +1,3 @@
 function navigateToSection(sectionId) {
-    window.location.href = '../mine-lob.html#' + sectionId;
+    window.location.href = './my-run.html#' + sectionId;
 }
