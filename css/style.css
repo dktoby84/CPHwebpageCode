@@ -43,18 +43,17 @@ h2 {
 h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: large;
-  margin: 5;
+  margin: 5px;
   padding: 0;
-  color: black;
-  
+  color: black;  
 }
 h4 {
   font-family: 'Montserrat', sans-serif;
   font-size: medium;
-  margin: 5;
+  margin: 5px;
   padding: 0;
   color: black;
-  
+  font-weight: normal;  
 }
 
 
