@@ -32,6 +32,9 @@ Hjemmesiden indeholder følgende sektioner:
 - **JavaScript**: Tilføjer interaktivitet på siden, såsom klikbare billeder og en responsiv menu.
 - **Git og GitHub**: Projektet er versionsstyret med Git og hostes på GitHub Pages.
 
+## Sprogtilgængelighed
+- Hjemmesiden er nu tilgængelig på både dansk og engelsk. Den engelske version er oprettet ved hjælp af AI, hvor HTML-filerne er kopieret og opdateret med engelsk tekst samt <html lang="en"> for korrekt sprogindstilling. Man skifter ved hjælp af knapper på siderne.
+
 ## Sådan åbner du projektet
 1. Klon repository:  
    `git clone https://github.com/dktoby84/CPHwebpageCode.git`
