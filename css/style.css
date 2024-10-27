@@ -40,6 +40,14 @@ h2 {
   color: black;
   
 }
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
+  margin: 5;
+  padding: 0;
+  color: black;
+  
+}
 
 
 #landing {
