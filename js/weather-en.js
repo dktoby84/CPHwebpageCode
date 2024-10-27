@@ -3,7 +3,7 @@ const apiKey = '6c4ac48c5887915bd67c13bbd0359238';
 
 // Funktion til at hente vejret baseret på bredde- og længdegrad
 function getWeather(latitude, longitude) {
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}&lang=da`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}&lang=en`;
 
   fetch(url)
     .then(response => response.json())
