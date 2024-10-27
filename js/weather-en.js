@@ -1,7 +1,5 @@
-// Din OpenWeatherMap API-nøgle
 const apiKey = '6c4ac48c5887915bd67c13bbd0359238';
 
-// Funktion til at hente vejret baseret på bredde- og længdegrad
 function getWeather(latitude, longitude) {
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}&lang=en`;
 
@@ -19,7 +17,6 @@ function getWeather(latitude, longitude) {
     });
 }
 
-// Få brugerens position
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -34,5 +31,4 @@ function getLocation() {
   }
 }
 
-// Kald funktionen når siden indlæses
 window.onload = getLocation;

@@ -1,6 +1,5 @@
-// Countdown til næste løb
 const countDownDate = new Date("April 13, 2025 10:10:00").getTime();
-const raceName = "Reborn Classic - Family Run"; // Tilføj løbsnavnet her
+const raceName = "Reborn Classic - Family Run"; 
 
 const x = setInterval(function() {
   const now = new Date().getTime();

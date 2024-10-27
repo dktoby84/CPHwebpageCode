@@ -295,7 +295,7 @@ button:hover {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
-  background-color: rgba(0, 0, 0, 0.5); /* Transparent sort baggrund */
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   padding: 10px;
   color: white;
@@ -418,7 +418,7 @@ button:hover {
 }
 
 .response-button:hover {
-    background-color: #45a049; /* Mørkere grøn ved hover */
+    background-color: #45a049;
 }
 
 footer {

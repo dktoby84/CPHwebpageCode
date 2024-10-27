@@ -17,4 +17,4 @@ function updateChart(answer) {
     updateDisplay();
 }
 
-updateDisplay();  // Initial visning af svarene
+updateDisplay();  

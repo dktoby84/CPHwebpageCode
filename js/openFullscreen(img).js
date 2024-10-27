@@ -41,7 +41,7 @@ function openFullscreen(media) {
 
     fullScreenDiv.appendChild(fullScreenMedia);
 
-    // Next button
+    
     const nextButton = document.createElement('button');
     nextButton.innerText = '>';
     nextButton.style.position = 'absolute';
@@ -57,7 +57,7 @@ function openFullscreen(media) {
     nextButton.onclick = () => nextMedia(fullScreenMedia);
     fullScreenDiv.appendChild(nextButton);
 
-    // Previous button
+    
     const prevButton = document.createElement('button');
     prevButton.innerText = '<';
     prevButton.style.position = 'absolute';
@@ -73,7 +73,7 @@ function openFullscreen(media) {
     prevButton.onclick = () => prevMedia(fullScreenMedia);
     fullScreenDiv.appendChild(prevButton);
 
-    // Close button
+    
     const closeButton = document.createElement('button');
     closeButton.innerText = 'X';
     closeButton.style.position = 'absolute';
