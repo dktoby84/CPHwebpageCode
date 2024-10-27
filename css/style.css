@@ -481,10 +481,21 @@ footer {
     .mine-lob-item img {
         max-width: 100%; 
     }
-    button {
-        width: 100%; 
-        padding: 15px; 
-    }
+    .fullScreenDiv button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 10px;
+      font-size: 1.5em;
+  }
+
+  .fullScreenDiv .next-button {
+      right: 10px;
+  }
+
+  .fullScreenDiv .prev-button {
+      left: 10px;
+  }
 
         footer {
         padding: 15px;
